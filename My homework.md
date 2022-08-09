@@ -29,3 +29,26 @@ else if (numberB > numberA && numberB > numberC)
 Console.WriteLine("numberB максимальное число");
 else  
 Console.WriteLine("numberC максимальное число");
+
+Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+4 -> да
+-3 -> нет
+7 -> нет
+
+Console.WriteLine("Введите число");
+int number = int.Parse(Console.ReadLine());
+if (number%2 == 0)
+Console.WriteLine("Да");
+else 
+Console.WriteLine("Нет");
+
+Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+5 -> 2, 4
+8 -> 2, 4, 6, 8
+
+Console.Write("Введите число N: ");
+int num = Convert.ToInt32(Console.ReadLine());
+string result="";
+for (int i = 1; i <= num; i++)
+    if (i % 2 == 0) result = $"{result} {i},";
+Console.WriteLine($"{num} -> {result.Remove(result.Length - 1)}");
